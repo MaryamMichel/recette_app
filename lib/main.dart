@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:recette_app/screens/home_page.dart';
-
+import 'package:recette_app/Widgets/nav_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,13 +8,12 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter recette app',
-      debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      title: 'Flutter Demo',
+      home: NavBar(),
     );
   }
 }
-
