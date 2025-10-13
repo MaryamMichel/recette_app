@@ -29,7 +29,7 @@ class ProfilePage extends StatelessWidget {
               const Text(
                 "jean.dupont@email.com",
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 15,
                 ),
               ),
               const SizedBox(height: 32),
