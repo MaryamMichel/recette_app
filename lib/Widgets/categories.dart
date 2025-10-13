@@ -68,10 +68,10 @@ class _CategoriesWidgetState extends State<CategoriesWidget> {
                   child: Text(
                     categories[index],
                     style: TextStyle(
-                        color: isSelected ? Colors.white : Colors.black87,
-                        fontWeight:
-                        isSelected ? FontWeight.bold : FontWeight.normal,
-                        fontSize: 15
+                      color: isSelected ? Colors.white : Colors.black87,
+                      fontWeight:
+                      isSelected ? FontWeight.bold : FontWeight.normal,
+                      fontSize: 15
                     ),
                   ),
                 ),
@@ -84,3 +84,4 @@ class _CategoriesWidgetState extends State<CategoriesWidget> {
     );
   }
 }
+
