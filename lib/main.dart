@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:recette_app/screens/profile_page.dart';
+import 'package:adaptive_theme/adaptive_theme.dart';
 
 void main() {
   runApp(const MyApp());

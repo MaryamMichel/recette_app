@@ -6,7 +6,7 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xFFEFEAE8),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(vertical: 24.0, horizontal: 24.0),
@@ -18,9 +18,9 @@ class ProfilePage extends StatelessWidget {
                 child: Icon(Icons.person, color: Colors.white, size: 50),
               ),
               const SizedBox(height: 16),
-              const Text(
+              Text(
                 "Jean Dupont",
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
                 ),
@@ -29,7 +29,6 @@ class ProfilePage extends StatelessWidget {
               const Text(
                 "jean.dupont@email.com",
                 style: TextStyle(
-                  color: Colors.grey,
                   fontSize: 16,
                 ),
               ),
@@ -51,77 +50,91 @@ class ProfilePage extends StatelessWidget {
                       "12",
                       style: TextStyle(color: Colors.black),
                     ),
-                    tileColor: Colors.grey,
+                    tileColor: Colors.grey[300],
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
                   const SizedBox(height: 16),
-
-                  const ListTile(
-                    leading: Icon(
+                  ListTile(
+                    leading: const Icon(
                       Icons.favorite_border,
                       color: Colors.deepOrange,
                     ),
-                    title: Text(
+                    title: const Text(
                       "Favoris",
                       style: TextStyle(
                         color: Colors.black,
                       ),
                     ),
-                    trailing: Text(
+                    trailing: const Text(
                       "28",
                       style: TextStyle(color: Colors.black),
                     ),
-                    tileColor: Colors.grey,
+                    tileColor: Colors.grey[300],
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
                   const SizedBox(height: 16),
-                  const ListTile(
-                    leading: Icon(
+                  ListTile(
+                    leading: const Icon(
                       Icons.shopping_cart,
                       color: Colors.deepOrange,
                     ),
-                    title: Text(
+                    title: const Text(
                       "Liste des courses",
                       style: TextStyle(
                         color: Colors.black,
                       ),
                     ),
-                    trailing: Text(
+                    trailing: const Text(
                       "3",
                       style: TextStyle(color: Colors.black),
                     ),
-                    tileColor: Colors.grey,
+                    tileColor: Colors.grey[300],
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
                   const SizedBox(height: 16),
-                  const ListTile(
-                    leading: Icon(
+                  ListTile(
+                    leading: const Icon(
                       Icons.settings,
                     ),
-                    title: Text(
+                    title: const Text(
                       "Paramètres",
                       style: TextStyle(
                         color: Colors.black,
                       ),
                     ),
-                    tileColor: Colors.grey,
+                    tileColor: Colors.grey[300],
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
                   SizedBox(height: 16),
-                  const ListTile(
-                    leading: Icon(
+                  ListTile(
+                    leading: const Icon(
                       Icons.dark_mode_outlined,
                     ),
-                    title: Text(
+                    title: const Text(
                       "Thème sombre",
                       style: TextStyle(
                         color: Colors.black,
                       ),
                     ),
-                    tileColor: Colors.grey,
+                    tileColor: Colors.grey[300],
+
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
                   SizedBox(
                     height: 16,
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      // Button action
                       print("Hello world !!");
                     },
                     style: ElevatedButton.styleFrom(
@@ -145,7 +158,6 @@ class ProfilePage extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-
                       ],
                     ),
                   ),
