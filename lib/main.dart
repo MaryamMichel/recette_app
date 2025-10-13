@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:recette_app/screens/home_page.dart';
 import 'package:recette_app/screens/profile_page.dart';
 
 void main() {
@@ -13,9 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       home: ProfilePage(),
-
     );
   }
 }
