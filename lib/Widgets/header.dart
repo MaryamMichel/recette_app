@@ -46,9 +46,7 @@ class Header extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(
-              height: 20
-          ),
+          const SizedBox(height: 20),
           Container(
             decoration: BoxDecoration(
               color: Colors.black.withOpacity(0.15),
@@ -62,16 +60,16 @@ class Header extends StatelessWidget {
               ],
             ),
             child: TextField(
-              style: const TextStyle(
-                  color: Colors.white
-              ),
+              style: const TextStyle(color: Colors.white),
               decoration: InputDecoration(
                 hintText: 'Rechercher une recette...',
                 hintStyle: TextStyle(color: Colors.white70),
                 prefixIcon: const Icon(Icons.search, color: Colors.white70),
                 border: InputBorder.none,
-                contentPadding:
-                const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
+                contentPadding: const EdgeInsets.symmetric(
+                  vertical: 14,
+                  horizontal: 16,
+                ),
               ),
             ),
           ),
