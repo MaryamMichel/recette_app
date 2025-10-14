@@ -1,8 +1,14 @@
+import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
 
+  @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -125,7 +131,16 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     tileColor: Colors.grey[300],
-
+                    trailing: Switch(
+                      value: AdaptiveTheme.of(context).mode.isDark,
+                      onChanged: (value) {
+                        if (value) {
+                          AdaptiveTheme.of(context).setDark();
+                        } else {
+                          AdaptiveTheme.of(context).setLight();
+                        }
+                      },
+                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
