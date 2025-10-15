@@ -1,7 +1,6 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:recette_app/Widgets/nav_bar.dart';
-import 'package:recette_app/screens/Home.dart';
 import 'package:recette_app/screens/home_page.dart';
 import 'package:recette_app/screens/profile_page.dart';
 
@@ -13,6 +12,7 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   final AdaptiveThemeMode? savedThemeMode;
+
   const MyApp({super.key, this.savedThemeMode});
 
   @override
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         title: 'Adaptive Theme Demo',
         theme: ThemeData(),
         darkTheme: ThemeData.dark(),
-        home: const HomeScreen(),
+        home: const NavBar(),
       ),
       debugShowFloatingThemeButton: true,
     );

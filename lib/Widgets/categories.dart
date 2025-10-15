@@ -9,7 +9,12 @@ class CategoriesWidget extends StatefulWidget {
 
 class _CategoriesWidgetState extends State<CategoriesWidget> {
   final List<String> categories = [
-    'Tout', 'Italien', 'Asiatique', 'Dessert', 'Végétarien'];
+    'Tout',
+    'Italien',
+    'Asiatique',
+    'Dessert',
+    'Végétarien',
+  ];
 
   int selectedIndex = 0;
 
@@ -18,7 +23,6 @@ class _CategoriesWidgetState extends State<CategoriesWidget> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-
         const Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.0),
           child: Text(
@@ -30,7 +34,6 @@ class _CategoriesWidgetState extends State<CategoriesWidget> {
           ),
         ),
         const SizedBox(height: 12),
-
         SizedBox(
           height: 45,
           child: ListView.builder(
@@ -43,13 +46,13 @@ class _CategoriesWidgetState extends State<CategoriesWidget> {
                   setState(() {
                     selectedIndex = index;
                   });
-
-
                 },
                 child: Container(
                   margin: const EdgeInsets.symmetric(horizontal: 8),
-                  padding:
-                  const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 20,
+                    vertical: 10,
+                  ),
                   decoration: BoxDecoration(
                     color: isSelected ? Colors.orange : Colors.white,
                     borderRadius: BorderRadius.circular(30),
@@ -69,9 +72,10 @@ class _CategoriesWidgetState extends State<CategoriesWidget> {
                     categories[index],
                     style: TextStyle(
                       color: isSelected ? Colors.white : Colors.black87,
-                      fontWeight:
-                      isSelected ? FontWeight.bold : FontWeight.normal,
-                      fontSize: 15
+                      fontWeight: isSelected
+                          ? FontWeight.bold
+                          : FontWeight.normal,
+                      fontSize: 15,
                     ),
                   ),
                 ),
@@ -79,9 +83,7 @@ class _CategoriesWidgetState extends State<CategoriesWidget> {
             },
           ),
         ),
-
       ],
     );
   }
 }
-
