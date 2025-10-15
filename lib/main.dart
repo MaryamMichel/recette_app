@@ -1,7 +1,14 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:recette_app/screens/home_page.dart';
 
-void main() {
+void main() async {
+
+  // Ensure that plugin services are initialized so that `availableCameras()`
+  // can be called before `runApp()`
+  WidgetsFlutterBinding.ensureInitialized();
+
+
   runApp(const MyApp());
 }
 
