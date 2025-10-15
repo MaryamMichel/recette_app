@@ -1,6 +1,7 @@
 import 'package:camera/camera.dart';
+import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:recette_app/screens/home_page.dart';
+import 'package:recette_app/screens/profile_page.dart';
 
 void main() async {
 
@@ -10,17 +11,37 @@ void main() async {
 
 
   runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  final savedThemeMode = await AdaptiveTheme.getThemeMode();
+  runApp(MyApp(savedThemeMode: savedThemeMode));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final AdaptiveThemeMode? savedThemeMode;
+  const MyApp({super.key, this.savedThemeMode});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      home: HomePage(),
+    return AdaptiveTheme(
+      light: ThemeData(
+        useMaterial3: true,
+        brightness: Brightness.light,
+        colorSchemeSeed: Colors.blue,
+      ),
+      dark: ThemeData(
+        useMaterial3: true,
+        brightness: Brightness.dark,
+        colorSchemeSeed: Colors.green,
+      ),
+      initial: savedThemeMode ?? AdaptiveThemeMode.light,
+      // overrideMode: AdaptiveThemeMode.dark,
+      builder: (theme, darkTheme) => MaterialApp(
+        title: 'Adaptive Theme Demo',
+        theme: ThemeData(),
+        darkTheme: ThemeData.dark(),
+        home: const ProfilePage(),
+      ),
+      debugShowFloatingThemeButton: true,
     );
   }
 }
