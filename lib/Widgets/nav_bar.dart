@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:recette_app/Widgets/add_form.dart';
+import 'package:recette_app/screens/home_page.dart';
+import 'package:recette_app/screens/profile_page.dart';
 class NavBar extends StatefulWidget {
   const NavBar({
     super.key,
@@ -13,13 +15,12 @@ class _NavBarState extends State<NavBar> {
   int currentPageIndex = 0;
   List<Widget> widgetList = const [
     //Replac with pages
-    Text('Home', style: TextStyle(fontSize: 40)),
+    HomePage(),
     Text('Favorite', style: TextStyle(fontSize: 40)),
-    Text('Crée', style: TextStyle(fontSize: 40)),
+    AddForm(),
     Text('Courses', style: TextStyle(fontSize: 40)),
-    Text('Profil', style: TextStyle(fontSize: 40)),
+    ProfilePage(),
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
