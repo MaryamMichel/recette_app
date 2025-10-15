@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:recette_app/Widgets/add_form.dart';
 import 'package:recette_app/screens/home_page.dart';
 import 'package:recette_app/screens/profile_page.dart';
+import 'Form_widgets/add_form.dart';
 class NavBar extends StatefulWidget {
   const NavBar({
     super.key,
